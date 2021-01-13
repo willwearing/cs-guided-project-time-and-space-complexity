@@ -16,20 +16,17 @@ Notes:
 #SECOND TRY HERE:
 #how can we write this with only a single for loop that 
 #still gives us the same answer?
-def two_sum(nums, target):
 
-def two_sum_better(nums, target):
+
+def csSortedTwoSum(nums, target):
     d = {}
-    for index, num in enumerate(nums):  # O(n)
+    for index, num in enumerate(nums):
         d[num] = index
-    for index, num in enumerate(nums):  # O(n)
+    for index, num in enumerate(nums):
         diff = target - num
         if diff in d:
-            if diff == num: 
-                continue
             return [index, d[diff]]
-        return [-1, -1]
-print(two_sum_better([4, 5, 3, 6], 8))
+print(csSortedTwoSum([4, 5, 3, 6], 8))
 
 
 #FIRST TRY HERE:
